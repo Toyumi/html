@@ -1,0 +1,14 @@
+<!--pages/home/home.wxml-->
+<image 
+     src = 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4065516984,3977949593&fm=26&gp=0.jpg'/>
+<image src = '/image/EM$`TB]VH5P6A]I4J_L)5JJ.jpg'/>
+<button bindtap ='handlechooseAlbum'>选择图片</button>
+<image show-menu-by-longpress
+       src='http://img3.imgtn.bdimg.com/it/u=1262350220,1400272729&fm=26&gp=0.jpg'/> 
+<image src = '{{imagepath}}'/>  <!--绑定-->
+<!--bindload 监听加载完成 和 lazy-load  图片懒加载-->
+<view>--------------------</view>
+<image  wx:for="{{10}}"
+        src = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571752605885&di=5648e4eb6b022eae62769a35b96ca28a&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201610%2F23%2F20161023183126_ZSJF3.thumb.700_0.jpeg'
+        bindload='handleimageload' 
+        lazy-load='{{true}}'/>
